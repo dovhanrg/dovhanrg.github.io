@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+.li-item {
+  border: 1px solid lightgray;
+  padding: 0.5em;
+  margin: 0.5em auto;
+}
