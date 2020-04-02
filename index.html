@@ -6,50 +6,97 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Roman Dovhan profile</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .lds-dual-ring {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      top: 40%;
+      left: 45%;
+    }
+
+    .lds-dual-ring:after {
+      content: " ";
+      display: block;
+      width: 128px;
+      height: 104px;
+      margin: 8px;
+      border-radius: 80%;
+      border: 6px solid #cef;
+      border-color: #135e84 transparent #135e84 transparent;
+      animation: lds-dual-ring 1.2s linear infinite;
+    }
+
+    #wrapper {
+      display: none;
+    }
+
+    @keyframes lds-dual-ring {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <script>
+    function load() {
+      setTimeout(function () {
+        document.querySelector("#loader").style.display = "none";
+        document.querySelector("#wrapper").style.display = "block";
+        console.log(document.querySelector("#loader"), document.querySelector("#body"))
+      }, 1000)
+    };
+  </script>
 </head>
 
-<body>
-
-  <main>
-    <h1>Links to my projects</h1>
-    <div>
-      <ul>
-        <li class="li-item">
-          <h3>Simple HTML project.</h3>
-          <p>
-            Just html+css page, and little javascript for carousel. Responsive. Made from PDF.
-          </p>
-          <p>
-            <a href="https://dovhanrg.github.io/Dmi3yy/">https://dovhanrg.github.io/Dmi3yy/</a>
-          </p>
-          <p>
-            Code at github: <a href="https://github.com/dovhanrg/Dmi3yy">https://github.com/dovhanrg/Dmi3yy</a>
-          </p>
-        </li>
-        <li class="li-item">
-          <h3>Next.js pet project.</h3>
-          <p>
-            Project based on Next.js library (ReactJS). Works with simle API. Just making/deleting a new record to
-            database. Deployed at zeit.co.
-          </p>
-          <p><a href="https://devtoday.now.sh/">https://devtoday.now.sh/</a></p>
-          <p>
-            Code at github: <a href="https://github.com/dovhanrg/devtoday">https://github.com/dovhanrg/devtoday</a>
-          </p>
-        </li>
-        <li class="li-item">
-          <h3>Like-game app on ReactJS</h3>
-          <p>
-            This pet-project made with ReactJS. Deployed at heroku.com.
-          </p>
-          <p><a href="https://starnavi.herokuapp.com/">https://starnavi.herokuapp.com/</a></p>
-          <p>
-            Code at github: <a href="https://github.com/dovhanrg/devtoday">https://github.com/dovhanrg/devtoday</a>
-          </p>
-        </li>
-      </ul>
-    </div>
-  </main>
+<body onload="load()" id="body">
+  <div class="lds-dual-ring" id="loader"></div>
+  <div id="wrapper">
+    <main>
+      <h1>Links to my projects</h1>
+      <div>
+        <ul>
+          <li class="li-item">
+            <h3>Simple HTML project.</h3>
+            <p>
+              Just html+css page, and little javascript for carousel. Responsive. Made from PDF.
+            </p>
+            <p>
+              <a href="https://dovhanrg.github.io/Dmi3yy/">https://dovhanrg.github.io/Dmi3yy/</a>
+            </p>
+            <p>
+              Code at github: <a href="https://github.com/dovhanrg/Dmi3yy">https://github.com/dovhanrg/Dmi3yy</a>
+            </p>
+          </li>
+          <li class="li-item">
+            <h3>Next.js pet project.</h3>
+            <p>
+              Project based on Next.js library (ReactJS). Works with simle API. Just making/deleting a new record to
+              database. Deployed at zeit.co.
+            </p>
+            <p><a href="https://devtoday.now.sh/">https://devtoday.now.sh/</a></p>
+            <p>
+              Code at github: <a href="https://github.com/dovhanrg/devtoday">https://github.com/dovhanrg/devtoday</a>
+            </p>
+          </li>
+          <li class="li-item">
+            <h3>Like-game app on ReactJS</h3>
+            <p>
+              This pet-project made with ReactJS. Deployed at heroku.com.
+            </p>
+            <p><a href="https://starnavi.herokuapp.com/">https://starnavi.herokuapp.com/</a></p>
+            <p>
+              Code at github: <a href="https://github.com/dovhanrg/devtoday">https://github.com/dovhanrg/devtoday</a>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </div>
 </body>
 
 </html>
